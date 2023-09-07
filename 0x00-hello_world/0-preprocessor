@@ -1,9 +1,2 @@
-#include <stdio.h>
-
-/*
-* program main entry 
-*/
-
-void main(){
-  return 0;
-}
+#!/bin/bash
+gcc "$CFILE" -o c
