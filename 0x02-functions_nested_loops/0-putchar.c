@@ -1,4 +1,6 @@
-#include <unistd.h>
+#include "main.h"
+
+int _putchar(char c);
 
 /**
  * main - Main function of the program
@@ -10,10 +12,15 @@
 int main(void)
 {
 
-	char message[] = "_putchar";
-	size_t messageSize = sizeof(message);
-
-	write(1, message, messageSize);
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 
 	return (0);
 }
