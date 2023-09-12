@@ -38,4 +38,12 @@ void print_alphabet(void);
 
 int _islower(int c);
 
+/**
+ * _isalpha - Function to check alpha
+ * @c: The letter
+ * Description: This function check if letter passed is alpha
+ * Return: return 0 or 1
+ */
+
+
 #endif
