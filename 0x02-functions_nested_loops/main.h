@@ -47,4 +47,13 @@ int _islower(int c);
 
 int _isalpha(int c);
 
+/**
+ * print_sign - Check number passed sign
+ * @n: The number to check
+ * Description: This function print the sign of number passed
+ * Return: return 1 or 0 or -1
+ */
+
+int print_sign(int n);
+
 #endif
