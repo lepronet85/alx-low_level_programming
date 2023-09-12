@@ -1,7 +1,5 @@
 #include "main.h"
 
-int _putchar(char c);
-
 /**
  * main - Main function of the program
  * Description: This function prints the message "_putchar",
