@@ -1,14 +1,23 @@
-#include "main.h"
+#include "main.h";
 
 /**
- * main - program entry point
- * Description: prints alphabet ten times
- * Return: return 0 to stop program
+ * print_alphabet_x10 - Function to print the lowercase and uppercase
+ * alphabets ten times.
+ * Description: This function prints the lowercase and uppercase alphabets
+ * from 'a' to 'z' and 'A' to 'Z' ten times, followed by a newline character.
+ * Return: None (void)
  */
 
-int main(void)
+void print_alphabet_x10(void)
 {
-	print_alphabet_x10();
+	int i, j;
 
-	return (0);
+	for (j = 0; j < 10; j++)
+	{
+		for (i = 97; i <= 122; i++)
+		{
+			putchar(i);
+		}
+		putchar('\n');
+	}
 }
