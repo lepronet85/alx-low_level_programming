@@ -22,4 +22,12 @@ void print_alphabet_x10(void);
 
 void print_alphabet(void);
 
+/**
+ * _islower - Function to check lowecase
+ * Description: This function check if letter passed is lower
+ * Return: return 0 or 1
+ */
+
+int _islower(int c);
+
 #endif
