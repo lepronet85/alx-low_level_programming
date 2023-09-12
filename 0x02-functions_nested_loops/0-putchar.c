@@ -10,7 +10,7 @@
 int main(void)
 {
 
-	char message[] = "_putchar\n";
+	char message[] = "_putchar";
 	size_t messageSize = sizeof(message);
 
 	write(1, message, messageSize);
