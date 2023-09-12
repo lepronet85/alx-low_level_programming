@@ -45,5 +45,6 @@ int _islower(int c);
  * Return: return 0 or 1
  */
 
+int _isalpha(int c);
 
 #endif
