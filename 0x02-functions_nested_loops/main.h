@@ -2,7 +2,6 @@
 #define MAIN_H
 
 #include <stdio.h>
-#include <unistd.h>
 
 /**
  * _putchar - Similar to putchar from stdio
@@ -11,10 +10,7 @@
  * Return: None (void)
  */
 
-void _putchar(char c)
-{
-	write(1, &c, 1);
-}
+void _putchar(char c);
 
 /**
  * print_alphabet_x10 - Function to print the lowercase
