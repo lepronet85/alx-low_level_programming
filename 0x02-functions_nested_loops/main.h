@@ -2,6 +2,19 @@
 #define MAIN_H
 
 #include <stdio.h>
+#include <unistd.h>
+
+/**
+ * _putchar - Similar to putchar from stdio
+ * @c: The character to be written
+ * Description: similar to putchar from stdio
+ * Return: None (void)
+ */
+
+void _putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 /**
  * print_alphabet_x10 - Function to print the lowercase
@@ -24,6 +37,7 @@ void print_alphabet(void);
 
 /**
  * _islower - Function to check lowecase
+ * @c: The letter
  * Description: This function check if letter passed is lower
  * Return: return 0 or 1
  */
