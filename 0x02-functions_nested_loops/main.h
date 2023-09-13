@@ -111,4 +111,13 @@ int add(int a, int b);
 
 void print_to_98(int n);
 
+/**
+ * print_times_table - Function that prints n times tables
+ * @n: The number of times
+ * Description: This function prints n times tables, starting with 0
+ * Return: None (void)
+ */
+
+void print_times_table(int n);
+
 #endif
