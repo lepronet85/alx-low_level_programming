@@ -1,4 +1,4 @@
-#include "main.h";
+#include "main.h"
 
 /**
  * print_two_digits - Function that print two digits
