@@ -32,8 +32,6 @@ void jack_bauer(void)
 			_putchar(':');
 			print_two_digits(minute);
 			_putchar('\n');
-
-			sleep(1);
 		}
 	}
 }
