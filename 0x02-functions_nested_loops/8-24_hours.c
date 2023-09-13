@@ -2,6 +2,7 @@
 
 /**
  * print_two_digits - Function that print two digits
+ * @n: The number
  * Description: This function function prints two digits
  * Return: None (void)
  */
