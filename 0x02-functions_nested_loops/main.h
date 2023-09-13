@@ -101,4 +101,14 @@ void times_table(void);
 
 int add(int a, int b);
 
+/**
+ * print_to_98 - Function that prints n to 98
+ * @n: Start number
+ * Description: This function prints all natural numbers from n to 98,
+ * followed by a new line
+ * Return: None (void)
+ */
+
+void print_to_98(int n);
+
 #endif
