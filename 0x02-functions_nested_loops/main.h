@@ -91,4 +91,14 @@ void jack_bauer(void);
 
 void times_table(void);
 
+/**
+ * add - Function that add two integers
+ * @a: The first numer
+ * @b: The second number
+ * Description: This function add a and b passed
+ * Return: The sum of a and b
+ */
+
+int add(int a, int b);
+
 #endif
