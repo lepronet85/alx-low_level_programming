@@ -10,24 +10,32 @@ void times_table(void)
 {
 	int i, j, result;
 
-	for (i = 48; i < 58; i++)
+	for (i = 0; i <= 9; i++)
 	{
-		for (j = 48; j < 58; j++)
+		for (j = 0; j <= 9; j++)
 		{
 			result = i * j;
-			if (j == 48)
+			if (j == 0)
 			{
-				_putchar(result);
+				putchar('0');
 			}
 			else
 			{
 				_putchar(',');
 				_putchar(' ');
 
-				if (result < 58)
+				if (result < 10)
 					_putchar(' ');
 
-				_putchar(result);
+				if (result >= 10)
+				{
+					_putchar(resultat / 10 + '0');
+					_putchar(resultat % 10 + '0');
+				}
+				else
+				{
+					_putchar(result + '0');
+				}
 			}
 
 		}
