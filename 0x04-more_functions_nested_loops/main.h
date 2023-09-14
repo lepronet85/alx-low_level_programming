@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdio.h>
+
 /**
  * _putchar - Similar to putchar from stdio
  * @c: The character to be written
