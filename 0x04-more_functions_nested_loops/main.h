@@ -86,4 +86,14 @@ void print_line(int n);
 
 void print_diagonal(int n);
 
+/**
+ * print_square - Function that prints a square
+ * @size: The square size
+ * Description: This function prints a square, followed by a
+ * new line.
+ * Retur: None (void)
+ */
+
+void print_square(int size);
+
 #endif
