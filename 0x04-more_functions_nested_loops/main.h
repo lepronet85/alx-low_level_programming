@@ -68,4 +68,13 @@ void print_most_numbers(void);
 
 void more_numbers(void);
 
+/**
+ * print_line - Function that draws a straight line in the terminal
+ * @n: Draw number
+ * Description: This function draws a straight line in the terminal
+ * Return: None (void)
+ */
+
+void print_line(int n);
+
 #endif
