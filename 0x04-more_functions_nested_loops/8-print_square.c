@@ -1,4 +1,4 @@
-#nclude "main.h"
+#include "main.h"
 
 /**
  * print_square - Function that prints a square
