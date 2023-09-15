@@ -22,4 +22,13 @@ void _putchar(char c);
 
 int _isupper(int c);
 
+/**
+ * _isdigit - Function that check if digit
+ * @c: The value to check
+ * Description: This function that checks for a digit (0 through 9)
+ * Return: return 0 or 1
+ */
+
+int _isdigit(int c);
+
 #endif
