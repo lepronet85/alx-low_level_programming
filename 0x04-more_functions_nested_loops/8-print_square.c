@@ -5,7 +5,7 @@
  * @size: The square size
  * Description: This function prints a square, followed by a
  * new line.
- * Retur: None (void)
+ * Return: None (void)
  */
 
 void print_square(int size)
