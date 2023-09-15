@@ -77,4 +77,13 @@ void more_numbers(void);
 
 void print_line(int n);
 
+/**
+ * print_diagonal - Function that draws a diagonal line on the terminal
+ * @n: Draw number
+ * Description: This function draws a diagonal line on the terminal
+ * Return: None (void)
+ */
+
+void print_diagonal(int n);
+
 #endif
