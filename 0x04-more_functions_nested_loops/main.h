@@ -106,4 +106,13 @@ void print_square(int size);
 
 void print_triangle(int size);
 
+/**
+ * print_number - Function prints an integer
+ * @n: integer to print
+ * Description: This function prints an integer
+ * Return: None (void)
+ */
+
+void print_number(int n);
+
 #endif
