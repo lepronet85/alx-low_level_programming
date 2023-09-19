@@ -9,20 +9,25 @@
 
 void rev_string(char *s)
 {
+
+	int length;
+	int left;
+	int right;
+
 	if (s == NULL)
 	{
 		return;
 	}
 
-	int length = 0;
+	length = 0;
 
 	while (s[length] != '\0')
 	{
 		length++;
 	}
 
-	int left = 0;
-	int right = length - 1;
+	left = 0;
+	right = length - 1;
 
 	while (left < right)
 	{
