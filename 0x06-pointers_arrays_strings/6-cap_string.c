@@ -39,7 +39,7 @@ char *cap_string(char *str)
 	{
 		if (is_separator(*ptr))
 			new_word = true;
-		else if (new_word)
+		else if (new_word || ptr == str)
 		{
 			*ptr = toupper(*ptr);
 			new_word = false;
@@ -48,6 +48,8 @@ char *cap_string(char *str)
 			*ptr = tolower(*ptr);
 		ptr++;
 	}
+
+
 
 	return (str);
 }
