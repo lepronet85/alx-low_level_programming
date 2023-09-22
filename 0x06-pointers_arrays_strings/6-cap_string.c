@@ -2,7 +2,8 @@
 #include <stdbool.h>
 #include <ctype.h>
 
-/** is_separator - Function that checks separator
+/**
+ * is_separator - Function that checks separator
  * @c: The charcater
  * Description: This function checks separator
  * Return: true or false
@@ -18,8 +19,8 @@ bool is_separator(char c)
 		if (c == separators[i])
 			return (true);
 	}
-	
-	return false;
+
+	return (false);
 }
 
 /**
