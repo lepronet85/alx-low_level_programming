@@ -1,11 +1,14 @@
 #include "main.h"
 
 /**
- * _strcmp - Function that compares two strings
- * @s1: The first string
- * @s2: The second string
- * Description: This function compares two strings
- * Return: The compared result
+ * _strcmp - Compares two strings.
+ * @s1: The first string to compare.
+ * @s2: The second string to compare.
+ *
+ * Description: This function compares two strings lexicographically.
+ *
+ * Return: 0 if the strings are equal, a negative value if s1 is less than s2,
+ *         or a positive value if s1 is greater than s2.
  */
 
 int _strcmp(char *s1, char *s2)
@@ -13,9 +16,9 @@ int _strcmp(char *s1, char *s2)
 	while (*s1 != '\0' && *s2 != '\0')
 	{
 		if (*s1 < *s2)
-			return (-15);
+			return (-1);
 		else if (*s1 > *s2)
-			return (15);
+			return (1);
 
 		s1++;
 		s2++;
