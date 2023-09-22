@@ -33,23 +33,27 @@ bool is_separator(char c)
 char *cap_string(char *str)
 {
 	bool new_word = true;
-	char *ptr = str;
 
-	while (*ptr != '\0')
+	while (*str != '\0')
 	{
-		if (is_separator(*ptr))
-			new_word = true;
-		else if (new_word || ptr == str)
+		if (is_separator(*str))
 		{
-			*ptr = toupper(*ptr);
-			new_word = false;
+			new_word = true;
 		}
 		else
-			*ptr = tolower(*ptr);
-		ptr++;
+		{
+			if (new_word)
+			{
+				*str = toupper(*str);
+				new_word = false;
+			}
+			else
+			{
+				*str = tolower(*str);
+			}
+		}
+		str++;
 	}
 
-
-
-	return (str);
+	return str;
 }
