@@ -9,7 +9,7 @@
 
 void print_chessboard(char (*a)[8])
 {
-	int size = sizeof(a) / sizeof(a[0]);
+	int size = sizeof(*a) / sizeof(a[0]);
 	int i;
 	int j;
 
