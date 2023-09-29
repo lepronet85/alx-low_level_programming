@@ -33,15 +33,14 @@ int _sqrt_recursion(int n)
 
 int _sqrt_helper(int n, int start, int end)
 {
-	int mid = (start + end) / 2;
-	int square = mid * mid;
-
 	if (start > end)
 		return (-1);
 
-	if (square == n)
+	int mid = start + (end - start) / 2;
+
+	if (mid == n / mid && n % mid == 0)
 		return (mid);
-	else if (square < n)
+	else if (mid < n / mid)
 		return (_sqrt_helper(n, mid + 1, end));
 
 	return (_sqrt_helper(n, start, mid - 1));
