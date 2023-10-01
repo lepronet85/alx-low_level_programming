@@ -20,7 +20,7 @@ int is_prime_recursive(int n, int d)
 	if (n % d == 0)
 		return (0);
 
-	if (divisor == n - 1)
+	if (d == n - 1)
 		return (1);
 
 	return (is_prime_recursive(n, d + 1));
