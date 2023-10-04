@@ -6,7 +6,9 @@
  * with a specific character.
  * @size: Size of the array
  * @c: Character to insert
- * Returns: NULL if size is zero or if it fails, a pointer to the
+ * Description: This function Creates an array of characters and
+ * initializes it with a specific character
+ * Return: NULL if size is zero or if it fails, a pointer to the
  * array otherwise.
  */
 
