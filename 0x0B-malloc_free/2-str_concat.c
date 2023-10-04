@@ -35,7 +35,5 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; s2[i]; i++)
 		concatenated_str[concatenated_index++] = s2[i];
 
-	concatenated_str[total_length] = '\0';
-
 	return (concatenated_str);
 }
