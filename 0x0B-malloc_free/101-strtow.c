@@ -21,7 +21,7 @@ char **strtow(char *str)
 	split = (char **) malloc(sizeof(char *) * (words + 1));
 	if (split != NULL)
 	{
-		for (i = 0; i <= strlen(str) && words; i++)
+		for (i = 0; i <= (int)strlen(str) && words; i++)
 		{
 			if ((str[i] != ' ') && (str[i] != '\0'))
 				size++;
