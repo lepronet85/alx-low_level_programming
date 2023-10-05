@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+int num_words(char *str);
+
 /**
 * strtow - splits a stirng into words
 * @str: string to be splitted
@@ -19,7 +21,7 @@ char **strtow(char *str)
 	split = (char **) malloc(sizeof(char *) * (words + 1));
 	if (split != NULL)
 	{
-		for (i = 0; i <= len(str) && words; i++)
+		for (i = 0; i <= strlen(str) && words; i++)
 		{
 			if ((str[i] != ' ') && (str[i] != '\0'))
 				size++;
