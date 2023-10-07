@@ -13,7 +13,8 @@ int main(int argc, char *argv[])
 	int cents;
 	int coins[] = {25, 10, 2, 1};
 	int numCoins, minCoins;
-	int remainingCents, numThisDomination;
+	int remainingCents, numThisDenomination;
+	int i;
 
 	if (argc != 2)
 	{
