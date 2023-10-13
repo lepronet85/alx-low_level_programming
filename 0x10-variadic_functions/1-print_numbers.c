@@ -19,27 +19,16 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (; i < n; i++)
 	{
-		if (number < 0)
-		{
-			_putchar('-');
-			number = -number;
-		}
-
-		if (number == 0)
-			_putchar('0');
-		else
-			print_positive_number(number);
+		number = va_arg(args, int);
+		printf("%d", number);
 
 		if (i < n - 1 && separator != NULL)
 		{
-			while (*separator)
-			{
-				_putchar(*separator++);
-			}
+			printf("%s", separator);
 		}
 	}
 
 	va_end(args);
 
-	_putchar('\n');
+	printf("\n");
 }
