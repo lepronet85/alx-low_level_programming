@@ -1,15 +1,21 @@
-section .data
-    hello db "Hello, Holberton", 10, 0  ; The string to print, with a newline character
+extern printf
 
 section .text
-    global main
-    extern printf
+global main
 
 main:
-    push rbp
-    mov rdi, hello  ; Load the address of the string into rdi
-    call printf     ; Call printf
-    add rsp, 8      ; Adjust the stack pointer
-    xor rax, rax    ; Return 0 (optional)
-    pop rbp
-    ret
+push rbp
+
+mov rdi, fmt
+mov rsi, msg
+mov rax, 0
+call printf
+
+pop rbp
+
+mov rax, 0
+ret
+
+section .data
+msg: db "Hello, Holberton", 0
+fmt: db "%s", 10, 0
