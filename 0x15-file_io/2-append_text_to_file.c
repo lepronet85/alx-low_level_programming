@@ -3,6 +3,7 @@
 #include <sys/uio.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include "main.h"
 
 /**
  * create_file - A function that creates a file
