@@ -1,7 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/uio.h>
 #include <unistd.h>
+#include <fcntl.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -17,38 +19,35 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd = open(filename, O_RDONLY);
-	char *buffer = malloc(letters);
-	ssize_t bytes_read = read(fd, buffer, letters);
-	ssize_t bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
+	int fdo, fdr, fdw;
+	char *temp;
 
 	if (filename == NULL)
 		return (0);
 
-	if (fd == -1)
+	temp = malloc(sizeof(char) * letters);
+	if (temp == NULL)
 		return (0);
 
-	if (buffer == NULL)
+	fdo = open(filename, O_RDONLY);
+	if (fdo < 0)
 	{
-		close(fd);
-		return (0);
-	}
-
-	if (bytes_read == -1)
-	{
-		free(buffer);
-		close(fd);
- 		return (0);
-	}
-
-	if (bytes_written == -1 || bytes_written != bytes_read)
-	{
-		free(buffer);
-	close(fd);
+		free(temp);
 		return (0);
 	}
 
-	free(buffer);
-	close(fd);
-	return (bytes_written);
+	fdr = read(fdo, temp, letters);
+	if (fdr < 0)
+	{
+		free(temp);
+		return (0);
+	}
+
+	fdw = write(STDOUT_FILENO, temp, fdr);
+	free(temp);
+	close(fdo);
+
+	if (fdw < 0)
+		return (0);
+	return ((ssize_t)fdw);
 }
