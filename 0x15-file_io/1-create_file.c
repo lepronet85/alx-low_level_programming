@@ -1,47 +1,33 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/uio.h>
 #include <unistd.h>
-#include "main.h"
+#include <fcntl.h>
 
 /**
- * create_file - function that creates a file
- * @filename: The filename
- * @text_content: The file content
- * Return: 1 on success, -1 on failure
- * (file can not be created, file can not be written, write
- * “fails”, etc…)
- * The created file must have those permissions: rw-------. If the file
- * already exists, do not change the permissions.
- * if the file already exists, truncate it
- * if filename is NULL return -1
- * if text_content is NULL create an empty file
+ * create_file - A function that creates a file
+ * @filename: The filename to create
+ * @text_content: A NULL terminated string to write to the file
+ * Return: 1 on success, -1 if file can not be created, nor written,
+ * nor write fails.
  */
-
 int create_file(const char *filename, char *text_content)
 {
-	int fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
-	ssize_t text_length = 0;
-	ssize_t bytes_written = write(fd, text_content, text_length);
+	int fdo, fdw, len = 0;
 
 	if (filename == NULL)
 		return (-1);
 
-	if (fd == -1)
+	fdo = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
+	if (fdo < 0)
 		return (-1);
 
-	if (text_content != NULL)
-	{
-		while (text_content[text_length] != '\0')
-			text_length++;
+	while (text_content && *(text_content + len))
+		len++;
 
-		if (bytes_written != text_length)
-		{
-			close(fd);
-			return (-1);
-		}
-	}
-
-	close(fd);
+	fdw = write(fdo, text_content, len);
+	close(fdo);
+	if (fdw < 0)
+		return (-1);
 	return (1);
 }
