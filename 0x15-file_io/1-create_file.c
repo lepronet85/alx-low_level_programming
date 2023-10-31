@@ -20,7 +20,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	int fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
 	ssize_t text_length = 0;
 	ssize_t bytes_written = write(fd, text_content, text_length);
 
