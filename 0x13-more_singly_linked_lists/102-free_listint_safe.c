@@ -4,7 +4,7 @@
 /**
  * free_listint_safe - Frees a listint_t linked list safely.
  * @h: Pointer to the head of the list
- * Returns: the size of the list that was freed
+ * Return: the size of the list that was freed
  */
 size_t free_listint_safe(listint_t **h)
 {
