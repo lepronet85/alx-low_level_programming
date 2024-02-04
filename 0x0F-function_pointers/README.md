@@ -41,7 +41,7 @@ Write a function that searches for an integer.
 - if the operator is none of the above, print Error, followed by a new line, and exit with the status 99
 - if the user tries to divide (/ or %) by 0, print Error, followed by a new line, and exit with the status 100
 
-## Most hackers are young because young people tend to be adaptable. As long as you remain adaptable, you can always be a good hacker
+## 4. Most hackers are young because young people tend to be adaptable. As long as you remain adaptable, you can always be a good hacker
 
 Write a program that prints the opcodes of its own main function.
 
