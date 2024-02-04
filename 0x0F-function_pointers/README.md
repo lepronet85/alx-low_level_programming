@@ -30,11 +30,11 @@ Write a function that searches for an integer.
 - Usage: calc num1 operator num2
 - You can assume num1 and num2 are integers, so use the atoi function to convert them from the string input to int
 - operator is one of the following:
-	1. +: addition
-	2. -: subtraction
-	3. *: multiplication
-	4. /: division
-	5. %: modulo
+	- +: addition
+	- -: subtraction
+	- *: multiplication
+	- /: division
+	- %: modulo
 - The program prints the result of the operation, followed by a new line
 - You can assume that the result of all operations can be stored in an int
 - if the number of arguments is wrong, print Error, followed by a new line, and exit with the status 98
