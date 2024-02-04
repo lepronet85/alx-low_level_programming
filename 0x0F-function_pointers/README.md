@@ -4,7 +4,7 @@
 	
 Write a function that prints a name.
 
-Prototype: void print_name(char *name, void (*f)(char *));
+- Prototype: void print_name(char *name, void (*f)(char *));
 
 ## 1. If you spend too much time thinking about a thing, you'll never get it done
 
