@@ -1,4 +1,6 @@
 #include "search_algos.h"
+#include <stdio.h>
+#include <math.h>
 
 /**
  * jump_search - function that searches for a value
