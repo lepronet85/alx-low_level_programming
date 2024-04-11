@@ -1,34 +1,49 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "search_algos.h"
 
-listint_t *create_list(int *array, size_t size);
-void print_list(const listint_t *list);
-void free_list(listint_t *list);
-
 /**
- * main - Entry point
+ * jump_list - searches for a value in a sorted list of integers
+ * using the Jump search algorithm
+ * @list: pointer to the head of the list to search in
+ * @size: number of nodes in list
+ * @value: value to search for
  *
- * Return: Always EXIT_SUCCESS
+ * Return: a pointer to the first node where value is located,
+ * or NULL if value is not found or if list is NULL
  */
-int main(void)
+listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-    listint_t *list, *res;
-    int array[] = {
-        0, 1, 2, 3, 4, 7, 12, 15, 18, 19, 23, 53, 61, 62, 76, 99
-    };
-    size_t size = sizeof(array) / sizeof(array[0]);
+	size_t jump, prev;
+	listint_t *current;
+	size_t i;
 
-    list = create_list(array, size);
-    print_list(list);
+	if (list == NULL || size == 0)
+		return (NULL);
 
-    res =  jump_list(list, size, 53);
-    printf("Found %d at index: %lu\n\n", 53, res->index);
-    res =  jump_list(list, size, 2);
-    printf("Found %d at index: %lu\n\n", 2, res->index);
-    res =  jump_list(list, size, 999);
-    printf("Found %d at index: %p\n", 999, (void *) res);
+	jump = sqrt(size);
+	current = list;
+	prev = 0;
 
-    free_list(list);
-    return (EXIT_SUCCESS);
+	while (current->next != NULL && current->n < value)
+	{
+		printf("Value checked at index [%lu] = [%d]\n", current->index, current->n);
+		prev = current->index;
+		for (i = 0; current->next != NULL && i < jump; i++)
+			current = current->next;
+	}
+
+	printf("Value found between indexes [%lu] and [%lu]\n", prev, current->index);
+
+	printf("Value checked at index [%lu] = [%d]\n", prev,
+		((listint_t *)current)->n);
+	while (prev < current->index && ((listint_t *)current)->n <= value)
+	{
+		printf("Value checked at index [%lu] = [%d]\n", current->index, current->n);
+		if (((listint_t *)current)->n == value)
+			return ((listint_t *)current);
+		prev++;
+		current = current->next;
+	}
+
+	return (NULL);
 }
+
