@@ -46,7 +46,6 @@ typedef struct skiplist_s
 
 
 int linear_search(int *array, size_t size, int value);
-// int binary_search(int *array, size_t size, int value);
 size_t min(size_t a, size_t b);
 int binary_search(int *array, size_t low, size_t high, int value);
 int _binary_search(int *array, size_t left, size_t right, int value);
